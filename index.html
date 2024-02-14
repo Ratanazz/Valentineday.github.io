@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine's day</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Happy Valentine's day</h1>
+      <img id="myImage" src="Cat.jpg" alt="Cute Cat" />
+      <h2 id="myHeading">To You Rey</h2>
+      <div class="btn">
+        <button
+          class="button-74"
+          onclick="changeContent('Nooo', 'Joch No tver ey ')"
+        >
+          Nooo
+        </button>
+        <button
+          class="button-74"
+          onclick="changeContent('Thank You', 'You\'re Welcome')"
+        >
+          Thank You
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function changeContent(imageName, newText) {
+        var image = document.getElementById("myImage");
+        var heading = document.getElementById("myHeading");
+
+        if (imageName === "Nooo") {
+          image.src = "sad.jpg"; // Replace with the actual path to your gif
+        } else if (imageName === "Thank You") {
+          image.src =
+            "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzN2cDdqZzlzaXlwNWF0aGRlZ3M3MDkwam1vOWd5ZDdjMnBnMnE0MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lck9f0L8jPjRtkigYy/giphy.gif"; // Replace with the actual direct link to your gif
+        }
+
+        heading.textContent = newText;
+      }
+    </script>
+  </body>
+</html>
